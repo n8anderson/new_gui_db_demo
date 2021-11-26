@@ -1,9 +1,12 @@
 import gui
 import sys
+import sqlite3 as sql
+
 
 def main():
     # Main database stuff here
-    name = 'taco_tower.db'
+    conn, curs = sql.connect('north_star_db.db')
+
 
     # get_info(cursor, id) # May want to consider including this in GUI
     app = gui.QApplication(sys.argv)
